@@ -37,9 +37,9 @@ function make_vis(raw_data) {
   .domain([minSR,maxSR])
   .range(['maroon','white']);
 
-  var stitchColorScale = d3.scale.linear()
+  var stitchColorScale = d3.scale.quantize()
   .domain([minSR,maxSR])
-  .range(['white','black']);
+  .range(['white','black','black']);
 
   var balls = svg.selectAll('g')
   .data(data)
