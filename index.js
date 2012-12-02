@@ -39,7 +39,7 @@ function make_vis(raw_data) {
 
   var stitchColorScale = d3.scale.quantize()
   .domain([minSR,maxSR])
-  .range(['white','black','black']);
+  .range(['beige','black','black']);
 
   var balls = svg.selectAll('g')
   .data(data)
