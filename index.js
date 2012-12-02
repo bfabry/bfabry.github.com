@@ -108,10 +108,11 @@ function make_vis(raw_data) {
                       d.x,
                       d.y,
                       ballColorScale(d.strike_rate),
-                      stitchColorScale(d.strike_rate));
+                      stitchColorScale(d.strike_rate),
+                      d.name);
     }
 
-    function drawBall(group,radius,cx,cy,ballColor,stitchColor) {
+    function drawBall(group,radius,cx,cy,ballColor,stitchColor,title) {
       var ballRadius = 100;
       var seamHeight = 5;
 
@@ -147,7 +148,7 @@ function make_vis(raw_data) {
       .attr('stroke','black')
       .attr('stroke-width','2');
 
-      var maincirlce = ball.append('circle')
+      var maincircle = ball.append('circle')
       .attr('r',ballRadius)
       .attr('fill',ballColor)
       .attr('cx',ballRadius)
